@@ -25,4 +25,8 @@ export interface ISocketMessage {
    * Por que el usuario recibio el mensaje (para debug mas que nada)
    */
   motivo?: string;
+  /**
+   * La aplicacion que envio el mensaje
+   */
+  aplicacion?: string;
 }
