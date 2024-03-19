@@ -1,6 +1,6 @@
-import { ICliente } from "./cliente";
+import { ICliente } from './cliente';
 
-export type Rol = "Administrador" | "Operador";
+export type Rol = 'Administrador' | 'Operador';
 
 export interface IDatosPersonales {
   nombre?: string;
@@ -28,3 +28,11 @@ export interface IUsuario {
   // Virtuals
   cliente?: ICliente;
 }
+
+type OmitirCreate = '_id' | 'cliente';
+
+export interface ICreateUsuario extends Omit<Partial<IUsuario>, OmitirCreate> {}
+
+type OmitirUpdate = '_id' | 'cliente';
+
+export interface IUpdateUsuario extends Omit<Partial<IUsuario>, OmitirUpdate> {}
