@@ -17,8 +17,8 @@ export interface ITrackeo {
 
 type OmitirCreate = '_id' | 'cliente';
 
-export interface ICreateTrakeo extends Omit<Partial<ITrackeo>, OmitirCreate> {}
+export interface ICreateTrackeo extends Omit<Partial<ITrackeo>, OmitirCreate> {}
 
 type OmitirUpdate = '_id' | 'cliente';
 
-export interface IUpdateTrakeo extends Omit<Partial<ITrackeo>, OmitirUpdate> {}
+export interface IUpdateTrackeo extends Omit<Partial<ITrackeo>, OmitirUpdate> {}
