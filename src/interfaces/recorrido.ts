@@ -1,5 +1,5 @@
-import { ICoordenadas, IGeoJSONLineString } from '../auxiliares';
-import { ICliente } from './cliente';
+import { ICoordenadas, IGeoJSONLineString } from "../auxiliares";
+import { ICliente } from "./cliente";
 
 export interface IParada {
   _id?: string;
@@ -24,18 +24,18 @@ export interface IRecorrido {
   recorrido?: ICoordenadas[];
   geojson?: IGeoJSONLineString;
   paradas?: IParada[];
-  franjaHoraria?: IFranjaHoraria;
+  franjaHoraria?: IFranjaHoraria[];
 
   // Populate
   cliente?: ICliente;
 }
 
-type OmitirCreate = '_id' | 'cliente';
+type OmitirCreate = "_id" | "cliente";
 
 export interface ICreateRecorrido
   extends Omit<Partial<IRecorrido>, OmitirCreate> {}
 
-type OmitirUpdate = '_id' | 'cliente';
+type OmitirUpdate = "_id" | "cliente";
 
 export interface IUpdateRecorrido
   extends Omit<Partial<IRecorrido>, OmitirUpdate> {}
