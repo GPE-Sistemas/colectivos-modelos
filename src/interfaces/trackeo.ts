@@ -1,6 +1,6 @@
-import { ICliente } from "./cliente";
+import { ICliente } from './cliente';
 
-export interface ITrakeo {
+export interface ITrackeo {
   _id?: string;
   //
   idCliente?: string;
@@ -15,10 +15,10 @@ export interface ITrakeo {
   cliente?: ICliente;
 }
 
-type OmitirCreate = "_id" | "cliente";
+type OmitirCreate = '_id' | 'cliente';
 
-export interface ICreateTrakeo extends Omit<Partial<ITrakeo>, OmitirCreate> {}
+export interface ICreateTrakeo extends Omit<Partial<ITrackeo>, OmitirCreate> {}
 
-type OmitirUpdate = "_id" | "cliente";
+type OmitirUpdate = '_id' | 'cliente';
 
-export interface IUpdateTrakeo extends Omit<Partial<ITrakeo>, OmitirUpdate> {}
+export interface IUpdateTrakeo extends Omit<Partial<ITrackeo>, OmitirUpdate> {}
