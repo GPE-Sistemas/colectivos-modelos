@@ -1,9 +1,7 @@
 import { ICliente } from "./cliente";
+import { IColectivo } from "./colectivo";
 
-export interface ITracker {
-  _id?: string;
-  //
-  idCliente?: string;
+export interface ITraccarDevice {
   // Datos de traccar
   id?: number;
   name?: string;
@@ -18,9 +16,20 @@ export interface ITracker {
   contact?: string;
   category?: string;
   attributes?: object;
+}
+
+export interface ITracker {
+  _id?: string;
+  //
+  idCliente?: string;
+  identificacion?: string;
+  asignadoA?: string;
+
+  traccar?: ITraccarDevice;
 
   // Populate
   cliente?: ICliente;
+  colectivo?: IColectivo;
 }
 
 type OmitirCreate = "_id" | "cliente";
