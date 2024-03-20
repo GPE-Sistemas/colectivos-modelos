@@ -22,6 +22,7 @@ export interface ITracker {
   _id?: string;
   //
   idCliente?: string;
+  nombre?: string;
   identificacion?: string;
   asignadoA?: string;
 
