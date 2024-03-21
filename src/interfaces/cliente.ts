@@ -3,8 +3,16 @@ export interface IImagenesCliente {
   banner?: string;
 }
 
+export interface ITemaCliente {
+  primaryColor?: string;
+  accentColor?: string;
+  warnColor?: string;
+  typography?: string;
+}
+
 export interface IConfigCliente {
   imagenes?: IImagenesCliente;
+  tema?: ITemaCliente;
 }
 
 export interface ICliente {
@@ -16,10 +24,10 @@ export interface ICliente {
   config?: IConfigCliente;
 }
 
-type OmitirCreate = '_id';
+type OmitirCreate = "_id";
 
 export interface ICreateCliente extends Omit<Partial<ICliente>, OmitirCreate> {}
 
-type OmitirUpdate = '_id';
+type OmitirUpdate = "_id";
 
 export interface IUpdateCliente extends Omit<Partial<ICliente>, OmitirUpdate> {}

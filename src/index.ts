@@ -1,5 +1,6 @@
 export * from "./auxiliares";
 
+export * from "./interfaces/apikey";
 export * from "./interfaces/client";
 export * from "./interfaces/cliente";
 export * from "./interfaces/colectivo";
