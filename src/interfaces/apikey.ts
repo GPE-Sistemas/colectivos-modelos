@@ -4,6 +4,7 @@ export interface IApikey {
   _id?: string;
   //
   identificacion?: string;
+  key?: string;
 
   // Permisos
   global?: boolean;
