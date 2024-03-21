@@ -1,11 +1,13 @@
-import { ICoordenadas, IGeoJSONLineString } from "../auxiliares";
+import { ICoordenadas, IGeoJSONLineString, IGeoJSONPoint } from "../auxiliares";
 import { ICliente } from "./cliente";
 
 export interface IParada {
   _id?: string;
   ubicacion?: ICoordenadas;
+  geojson?: IGeoJSONPoint;
   nombre?: string;
   direccion?: string;
+  destino?: string;
 }
 
 export interface IFranjaHoraria {
