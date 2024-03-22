@@ -4,21 +4,21 @@
 //  Point LineString  Polygon  MultiPoint  MultiLineString  MultiPolygon  GeometryCollection
 
 export interface IGeoJSONPoint {
-  type: " Point";
+  type: "Point";
   coordinates: [number, number];
 }
 
 export interface IGeoJSONLineString {
-  type: " LineString";
+  type: "LineString";
   coordinates: [number, number][];
 }
 
 export interface IGeoJSONPolygon {
-  type: " Polygon";
+  type: "Polygon";
   coordinates: [[number, number][]];
 }
 
 export interface IGeoJSONMultiPolygon {
-  type: " MultiPolygon";
+  type: "MultiPolygon";
   coordinates: [[[number, number][]][]];
 }
