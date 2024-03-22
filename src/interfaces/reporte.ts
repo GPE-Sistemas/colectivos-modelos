@@ -10,7 +10,7 @@ export interface IReporte {
   idTracker?: string;
   idColectivo?: string;
   // Datos de traccar
-
+  traccarUniqueId?: string;
   fecha?: string;
   ubicacion?: ICoordenadas;
   geojson?: IGeoJSONPoint;
