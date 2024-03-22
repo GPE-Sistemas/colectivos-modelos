@@ -1,5 +1,6 @@
 import { ICoordenadas, IGeoJSONPoint } from "../auxiliares";
 import { ICliente } from "./cliente";
+import { IColectivo } from "./colectivo";
 import { ITracker } from "./tracker";
 
 export interface IReporte {
@@ -7,6 +8,7 @@ export interface IReporte {
   //
   idCliente?: string;
   idTracker?: string;
+  idColectivo?: string;
   // Datos de traccar
 
   fecha?: string;
@@ -17,12 +19,13 @@ export interface IReporte {
   // Populate
   cliente?: ICliente;
   tracker?: ITracker;
+  colectivo?: IColectivo;
 }
 
-type OmitirCreate = "_id" | "cliente" | "tracker";
+type OmitirCreate = "_id" | "cliente" | "tracker" | "colectivo";
 
 export interface ICreateReporte extends Omit<Partial<IReporte>, OmitirCreate> {}
 
-type OmitirUpdate = "_id" | "cliente" | "tracker";
+type OmitirUpdate = "_id" | "cliente" | "tracker" | "colectivo";
 
 export interface IUpdateReporte extends Omit<Partial<IReporte>, OmitirUpdate> {}
