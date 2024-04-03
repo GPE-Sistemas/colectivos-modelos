@@ -7,6 +7,7 @@ export interface IReporte {
   _id?: string;
   //
   idCliente?: string;
+  idLinea?: string;
   idTracker?: string;
   idColectivo?: string;
   // Datos de traccar

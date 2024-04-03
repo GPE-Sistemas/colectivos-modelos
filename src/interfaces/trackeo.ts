@@ -6,6 +6,7 @@ export interface ITrackeo {
   _id?: string;
   //
   idCliente?: string;
+  idLinea?: string;
   idRecorrido?: string;
   idColectivo?: string;
 

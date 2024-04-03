@@ -4,6 +4,7 @@ export * from "./interfaces/apikey";
 export * from "./interfaces/client";
 export * from "./interfaces/cliente";
 export * from "./interfaces/colectivo";
+export * from "./interfaces/linea";
 export * from "./interfaces/recorrido";
 export * from "./interfaces/reporte";
 export * from "./interfaces/token";

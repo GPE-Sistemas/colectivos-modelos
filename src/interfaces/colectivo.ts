@@ -1,4 +1,5 @@
 import { ICliente } from "./cliente";
+import { ILinea } from "./linea";
 import { IRecorrido } from "./recorrido";
 import { ITracker } from "./tracker";
 
@@ -6,6 +7,7 @@ export interface IColectivo {
   _id?: string;
   //
   idCliente?: string;
+  idLinea?: string;
   idRecorrido?: string;
   idUnicoTraccar?: string;
   //
@@ -15,6 +17,7 @@ export interface IColectivo {
 
   // Populate
   cliente?: ICliente;
+  linea?: ILinea;
   recorrido?: IRecorrido;
   tracker?: ITracker;
 }

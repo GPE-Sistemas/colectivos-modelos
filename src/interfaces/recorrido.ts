@@ -1,5 +1,6 @@
 import { ICoordenadas, IGeoJSONLineString, IGeoJSONPoint } from "../auxiliares";
 import { ICliente } from "./cliente";
+import { ILinea } from "./linea";
 
 export interface IParada {
   _id?: string;
@@ -21,6 +22,7 @@ export interface IRecorrido {
   _id?: string;
 
   idCliente?: string;
+  idLinea?: string;
   //
   nombre?: string;
   recorrido?: ICoordenadas[];
@@ -30,6 +32,7 @@ export interface IRecorrido {
 
   // Populate
   cliente?: ICliente;
+  linea?: ILinea;
 }
 
 type OmitirCreate = "_id" | "cliente";
