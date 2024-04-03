@@ -1,6 +1,7 @@
 import { ICoordenadas, IGeoJSONPoint } from "../auxiliares";
 import { ICliente } from "./cliente";
 import { IColectivo } from "./colectivo";
+import { ILinea } from "./linea";
 import { ITracker } from "./tracker";
 
 export interface IReporte {
@@ -19,6 +20,7 @@ export interface IReporte {
 
   // Populate
   cliente?: ICliente;
+  linea?: ILinea;
   tracker?: ITracker;
   colectivo?: IColectivo;
 }

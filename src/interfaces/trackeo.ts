@@ -1,5 +1,6 @@
 import { ICliente } from "./cliente";
 import { IColectivo } from "./colectivo";
+import { ILinea } from "./linea";
 import { IParada, IRecorrido } from "./recorrido";
 
 export interface ITrackeo {
@@ -17,6 +18,7 @@ export interface ITrackeo {
 
   // Populate
   cliente?: ICliente;
+  linea?: ILinea;
   colectivo?: IColectivo;
   recorrido?: IRecorrido;
   parada?: IParada;
