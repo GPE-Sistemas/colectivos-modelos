@@ -9,7 +9,7 @@ export interface IColectivo {
   idCliente?: string;
   idLinea?: string;
   idRecorrido?: string;
-  idUnicoTraccar?: string;
+  idUnicoTraccar?: number;
   //
   identificacion?: string;
   patente?: string;
