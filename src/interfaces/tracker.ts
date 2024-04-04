@@ -1,5 +1,5 @@
-import { ICliente } from "./cliente";
-import { IColectivo } from "./colectivo";
+import { ICliente } from './cliente';
+import { IColectivo } from './colectivo';
 
 export interface ITraccarDevice {
   // Datos de traccar
@@ -25,6 +25,7 @@ export interface ITracker {
   nombre?: string;
   identificacion?: string;
   asignadoA?: string;
+  uniqueId?: string;
 
   traccar?: ITraccarDevice;
 
@@ -33,10 +34,10 @@ export interface ITracker {
   colectivo?: IColectivo;
 }
 
-type OmitirCreate = "_id" | "cliente";
+type OmitirCreate = '_id' | 'cliente';
 
 export interface ICreateTracker extends Omit<Partial<ITracker>, OmitirCreate> {}
 
-type OmitirUpdate = "_id" | "cliente";
+type OmitirUpdate = '_id' | 'cliente';
 
 export interface IUpdateTracker extends Omit<Partial<ITracker>, OmitirUpdate> {}
