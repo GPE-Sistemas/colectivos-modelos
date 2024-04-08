@@ -1,5 +1,6 @@
 import { ICliente } from './cliente';
 import { IColectivo } from './colectivo';
+import { IReporte } from './reporte';
 
 export interface ITraccarDevice {
   // Datos de traccar
@@ -29,9 +30,13 @@ export interface ITracker {
 
   traccar?: ITraccarDevice;
 
+  //
+  idUltimoReporte?: string;
+
   // Populate
   cliente?: ICliente;
   colectivo?: IColectivo;
+  ultimoReporte?: IReporte;
 }
 
 type OmitirCreate = '_id' | 'cliente';

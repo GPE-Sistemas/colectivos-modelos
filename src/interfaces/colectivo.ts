@@ -1,7 +1,8 @@
-import { ICliente } from "./cliente";
-import { ILinea } from "./linea";
-import { IRecorrido } from "./recorrido";
-import { ITracker } from "./tracker";
+import { ICliente } from './cliente';
+import { ILinea } from './linea';
+import { IRecorrido } from './recorrido';
+import { IReporte } from './reporte';
+import { ITracker } from './tracker';
 
 export interface IColectivo {
   _id?: string;
@@ -13,21 +14,35 @@ export interface IColectivo {
   //
   identificacion?: string;
   patente?: string;
-  estado?: "Operativo" | "En mantenimiento" | "Fuera de servicio";
+  estado?: 'Operativo' | 'En mantenimiento' | 'Fuera de servicio';
+
+  //
+  idUltimoReporte?: string;
 
   // Populate
   cliente?: ICliente;
   linea?: ILinea;
   recorrido?: IRecorrido;
   tracker?: ITracker;
+  ultimoReporte?: IReporte;
 }
 
-type OmitirCreate = "_id" | "cliente" | "recorrido" | "tracker";
+type OmitirCreate =
+  | '_id'
+  | 'cliente'
+  | 'recorrido'
+  | 'tracker'
+  | 'ultimoReporte';
 
 export interface ICreateColectivo
   extends Omit<Partial<IColectivo>, OmitirCreate> {}
 
-type OmitirUpdate = "_id" | "cliente" | "recorrido" | "tracker";
+type OmitirUpdate =
+  | '_id'
+  | 'cliente'
+  | 'recorrido'
+  | 'tracker'
+  | 'ultimoReporte';
 
 export interface IUpdateColectivo
   extends Omit<Partial<IColectivo>, OmitirUpdate> {}
