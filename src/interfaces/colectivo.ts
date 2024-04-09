@@ -16,33 +16,19 @@ export interface IColectivo {
   patente?: string;
   estado?: 'Operativo' | 'En mantenimiento' | 'Fuera de servicio';
 
-  //
-  idUltimoReporte?: string;
-
   // Populate
   cliente?: ICliente;
   linea?: ILinea;
   recorrido?: IRecorrido;
   tracker?: ITracker;
-  ultimoReporte?: IReporte;
 }
 
-type OmitirCreate =
-  | '_id'
-  | 'cliente'
-  | 'recorrido'
-  | 'tracker'
-  | 'ultimoReporte';
+type OmitirCreate = '_id' | 'cliente' | 'recorrido' | 'tracker';
 
 export interface ICreateColectivo
   extends Omit<Partial<IColectivo>, OmitirCreate> {}
 
-type OmitirUpdate =
-  | '_id'
-  | 'cliente'
-  | 'recorrido'
-  | 'tracker'
-  | 'ultimoReporte';
+type OmitirUpdate = '_id' | 'cliente' | 'recorrido' | 'tracker';
 
 export interface IUpdateColectivo
   extends Omit<Partial<IColectivo>, OmitirUpdate> {}

@@ -30,19 +30,15 @@ export interface ITracker {
 
   traccar?: ITraccarDevice;
 
-  //
-  idUltimoReporte?: string;
-
   // Populate
   cliente?: ICliente;
   colectivo?: IColectivo;
-  ultimoReporte?: IReporte;
 }
 
-type OmitirCreate = '_id' | 'cliente';
+type OmitirCreate = '_id' | 'cliente' | 'colectivo';
 
 export interface ICreateTracker extends Omit<Partial<ITracker>, OmitirCreate> {}
 
-type OmitirUpdate = '_id' | 'cliente';
+type OmitirUpdate = '_id' | 'cliente' | 'colectivo';
 
 export interface IUpdateTracker extends Omit<Partial<ITracker>, OmitirUpdate> {}
