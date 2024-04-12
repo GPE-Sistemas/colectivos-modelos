@@ -32,18 +32,20 @@ export interface IRecorrido {
   franjaHoraria?: IFranjaHoraria[];
   destino?: string;
   por?: string;
+  //
+  color?: string;
 
   // Populate
   cliente?: ICliente;
   linea?: ILinea;
 }
 
-type OmitirCreate = '_id' | 'cliente';
+type OmitirCreate = '_id' | 'cliente' | 'linea';
 
 export interface ICreateRecorrido
   extends Omit<Partial<IRecorrido>, OmitirCreate> {}
 
-type OmitirUpdate = '_id' | 'cliente';
+type OmitirUpdate = '_id' | 'cliente' | 'linea';
 
 export interface IUpdateRecorrido
   extends Omit<Partial<IRecorrido>, OmitirUpdate> {}
