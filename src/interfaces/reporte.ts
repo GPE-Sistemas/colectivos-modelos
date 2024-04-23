@@ -15,7 +15,8 @@ export interface IReporte {
   idRecorrido?: string;
   // Datos de traccar
   traccarUniqueId?: string;
-  fecha?: string;
+  fechaDevice?: string;
+  fechaServer?: string;
   fechaCreacion?: string;
   ubicacion?: ICoordenadas;
   geojson?: IGeoJSONPoint;
