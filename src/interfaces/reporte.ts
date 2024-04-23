@@ -16,6 +16,7 @@ export interface IReporte {
   // Datos de traccar
   traccarUniqueId?: string;
   fecha?: string;
+  fechaCreacion?: string;
   ubicacion?: ICoordenadas;
   geojson?: IGeoJSONPoint;
   velocidad?: number;
@@ -30,6 +31,7 @@ export interface IReporte {
 
 type OmitirCreate =
   | "_id"
+  | "fechaCreacion"
   | "cliente"
   | "tracker"
   | "colectivo"
@@ -40,6 +42,7 @@ export interface ICreateReporte extends Omit<Partial<IReporte>, OmitirCreate> {}
 
 type OmitirUpdate =
   | "_id"
+  | "fechaCreacion"
   | "cliente"
   | "tracker"
   | "colectivo"
