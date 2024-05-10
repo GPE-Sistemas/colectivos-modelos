@@ -1,9 +1,9 @@
-import { ICoordenadas, IGeoJSONPoint } from "../auxiliares";
-import { ICliente } from "./cliente";
-import { IColectivo } from "./colectivo";
-import { ILinea } from "./linea";
-import { IRecorrido } from "./recorrido";
-import { ITracker } from "./tracker";
+import { ICoordenadaOL, ICoordenadas, IGeoJSONPoint } from '../auxiliares';
+import { ICliente } from './cliente';
+import { IColectivo } from './colectivo';
+import { ILinea } from './linea';
+import { IRecorrido } from './recorrido';
+import { ITracker } from './tracker';
 
 export interface IReporte {
   _id?: string;
@@ -18,7 +18,11 @@ export interface IReporte {
   fechaDevice?: string;
   fechaServer?: string;
   fechaCreacion?: string;
+  /**
+   * @deprecated Se usa ubicacionOl.
+   */
   ubicacion?: ICoordenadas;
+  ubicacionOl?: ICoordenadaOL;
   geojson?: IGeoJSONPoint;
   velocidad?: number;
 
@@ -31,23 +35,23 @@ export interface IReporte {
 }
 
 type OmitirCreate =
-  | "_id"
-  | "fechaCreacion"
-  | "cliente"
-  | "tracker"
-  | "colectivo"
-  | "recorrido"
-  | "linea";
+  | '_id'
+  | 'fechaCreacion'
+  | 'cliente'
+  | 'tracker'
+  | 'colectivo'
+  | 'recorrido'
+  | 'linea';
 
 export interface ICreateReporte extends Omit<Partial<IReporte>, OmitirCreate> {}
 
 type OmitirUpdate =
-  | "_id"
-  | "fechaCreacion"
-  | "cliente"
-  | "tracker"
-  | "colectivo"
-  | "recorrido"
-  | "linea";
+  | '_id'
+  | 'fechaCreacion'
+  | 'cliente'
+  | 'tracker'
+  | 'colectivo'
+  | 'recorrido'
+  | 'linea';
 
 export interface IUpdateReporte extends Omit<Partial<IReporte>, OmitirUpdate> {}

@@ -1,10 +1,19 @@
-import { ICoordenadas, IGeoJSONLineString, IGeoJSONPoint } from '../auxiliares';
+import {
+  ICoordenadaOL,
+  ICoordenadas,
+  IGeoJSONLineString,
+  IGeoJSONPoint,
+} from '../auxiliares';
 import { ICliente } from './cliente';
 import { ILinea } from './linea';
 
 export interface IParada {
   _id?: string;
+  /**
+   * @deprecated Se usa ubicacionOl.
+   */
   ubicacion?: ICoordenadas;
+  ubicacionOl?: ICoordenadaOL;
   geojson?: IGeoJSONPoint;
   nombre?: string;
   direccion?: string;
@@ -26,7 +35,11 @@ export interface IRecorrido {
   idLinea?: string;
   //
   nombre?: string;
+  /**
+   * @deprecated Se usa recorridoOl.
+   */
   recorrido?: ICoordenadas[];
+  recorridoOl?: ICoordenadaOL[];
   geojson?: IGeoJSONLineString;
   paradas?: IParada[];
   franjaHoraria?: IFranjaHoraria[];
