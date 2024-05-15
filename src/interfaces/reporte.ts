@@ -26,6 +26,8 @@ export interface IReporte {
   geojson?: IGeoJSONPoint;
   velocidad?: number;
 
+  reporteTraccar?: Record<string, any>;
+
   // Populate
   cliente?: ICliente;
   linea?: ILinea;
