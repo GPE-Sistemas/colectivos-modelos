@@ -20,10 +20,20 @@ export interface IEvento {
   cliente?: ICliente;
 }
 
-type OmitirCreate = '_id | fechaCreacion | cliente | tracker | colectivo';
+type OmitirCreate =
+  | '_id '
+  | 'fechaCreacion'
+  | 'cliente'
+  | 'tracker'
+  | 'colectivo';
 
 export interface ICreateEvento extends Omit<Partial<IEvento>, OmitirCreate> {}
 
-type OmitirUpdate = '_id | fechaCreacion | cliente | tracker | colectivo';
+type OmitirUpdate =
+  | '_id '
+  | 'fechaCreacion'
+  | 'cliente'
+  | 'tracker'
+  | 'colectivo';
 
 export interface IUpdateEvento extends Omit<Partial<IEvento>, OmitirUpdate> {}
