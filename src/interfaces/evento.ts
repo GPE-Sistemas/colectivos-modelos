@@ -21,7 +21,7 @@ export interface IEvento {
 }
 
 type OmitirCreate =
-  | '_id '
+  | '_id'
   | 'fechaCreacion'
   | 'cliente'
   | 'tracker'
@@ -30,7 +30,7 @@ type OmitirCreate =
 export interface ICreateEvento extends Omit<Partial<IEvento>, OmitirCreate> {}
 
 type OmitirUpdate =
-  | '_id '
+  | '_id'
   | 'fechaCreacion'
   | 'cliente'
   | 'tracker'
