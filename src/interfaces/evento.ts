@@ -5,6 +5,7 @@ import { ITracker } from './tracker';
 export interface IEvento {
   _id?: string;
   //
+  traccarUniqueId?: string;
   idTracker?: string;
   idColectivo?: string;
   idCliente?: string;
