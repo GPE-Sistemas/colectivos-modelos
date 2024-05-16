@@ -2,7 +2,7 @@ import { ICliente } from './cliente';
 import { IColectivo } from './colectivo';
 import { ITracker } from './tracker';
 
-export interface IEvento {
+export interface IEventoTraccar {
   _id?: string;
   //
   traccarUniqueId?: string;
@@ -27,7 +27,8 @@ type OmitirCreate =
   | 'tracker'
   | 'colectivo';
 
-export interface ICreateEvento extends Omit<Partial<IEvento>, OmitirCreate> {}
+export interface ICreateEventoTraccar
+  extends Omit<Partial<IEventoTraccar>, OmitirCreate> {}
 
 type OmitirUpdate =
   | '_id'
@@ -36,4 +37,5 @@ type OmitirUpdate =
   | 'tracker'
   | 'colectivo';
 
-export interface IUpdateEvento extends Omit<Partial<IEvento>, OmitirUpdate> {}
+export interface IUpdateEventoTraccar
+  extends Omit<Partial<IEventoTraccar>, OmitirUpdate> {}
