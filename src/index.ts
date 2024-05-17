@@ -12,3 +12,5 @@ export * from './interfaces/token';
 export * from './interfaces/trackeo';
 export * from './interfaces/tracker';
 export * from './interfaces/usuario';
+export * from './interfaces/externos/osrm';
+export * from './interfaces/externos/traccar';
