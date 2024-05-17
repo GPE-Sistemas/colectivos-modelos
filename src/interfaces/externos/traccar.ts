@@ -6,11 +6,11 @@ export interface Trip {
   distance?: number;
   spentFuel?: number;
   duration?: number;
-  startTime?: Date;
+  startTime?: string;
   startAddress?: string;
   startLat?: number;
   startLon?: number;
-  endTime?: Date;
+  endTime?: string;
   endAddress?: string;
   endLat?: number;
   endLon?: number;
@@ -22,11 +22,11 @@ export interface Stop {
   deviceId?: number;
   deviceName?: string;
   duration?: number;
-  startTime?: Date;
+  startTime?: string;
   address?: string;
   lat?: number;
   lon?: number;
-  endTime?: Date;
+  endTime?: string;
   spentFuel?: number;
   engineHours?: number;
 }
