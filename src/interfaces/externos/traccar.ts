@@ -21,13 +21,19 @@ export interface Trip {
 export interface Stop {
   deviceId?: number;
   deviceName?: string;
-  duration?: number;
-  startTime?: string;
-  address?: string;
-  lat?: number;
-  lon?: number;
-  endTime?: string;
+  distance?: number;
+  averageSpeed?: number;
+  maxSpeed?: number;
   spentFuel?: number;
+  startOdometer?: number;
+  endOdometer?: number;
+  startTime?: string;
+  endTime?: string;
+  positionId?: number;
+  latitude?: number;
+  longitude?: number;
+  address?: string;
+  duration?: number;
   engineHours?: number;
 }
 
