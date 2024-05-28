@@ -3,9 +3,9 @@ import {
   ICoordenadas,
   IGeoJSONLineString,
   IGeoJSONPoint,
-} from '../auxiliares';
-import { ICliente } from './cliente';
-import { ILinea } from './linea';
+} from "../auxiliares";
+import { ICliente } from "./cliente";
+import { ILinea } from "./linea";
 
 export interface IParada {
   _id?: string;
@@ -19,6 +19,10 @@ export interface IParada {
   direccion?: string;
   destino?: string;
   por?: string;
+  /**
+   * Tiempo que se suma al recorrido, es lo que se estima que tarda el colectivo en esa parada
+   */
+  tiempoParada?: number;
 }
 
 export interface IFranjaHoraria {
@@ -53,12 +57,12 @@ export interface IRecorrido {
   linea?: ILinea;
 }
 
-type OmitirCreate = '_id' | 'cliente' | 'linea';
+type OmitirCreate = "_id" | "cliente" | "linea";
 
 export interface ICreateRecorrido
   extends Omit<Partial<IRecorrido>, OmitirCreate> {}
 
-type OmitirUpdate = '_id' | 'cliente' | 'linea';
+type OmitirUpdate = "_id" | "cliente" | "linea";
 
 export interface IUpdateRecorrido
   extends Omit<Partial<IRecorrido>, OmitirUpdate> {}
